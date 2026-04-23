@@ -4,7 +4,7 @@ import type { Writable } from 'stream'
 import type { Response } from 'express'
 
 // Local Types
-import type { EventEventEmitter } from '../index'
+import type { EventEventEmitter } from '../index.js'
 import { Mock } from 'vitest'
 
 interface StreamWritable extends EventEventEmitter {
@@ -74,7 +74,6 @@ export interface MockResponse extends HttpServerResponse {
   json?: Mock
   jsonp?: Mock
   sendFile?: Mock
-  sendfile?: Mock
   download?: Mock
   contentType?: Mock
   type?: Mock

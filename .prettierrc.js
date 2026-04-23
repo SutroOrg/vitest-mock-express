@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   semi: false,
   trailingComma: 'all',
   singleQuote: true,
@@ -6,7 +6,7 @@ module.exports = {
   printWidth: 120,
   tabWidth: 2,
   tabs: false,
-  arrowParens: 'always', // Needed for the type in Typescript
+  arrowParens: 'always',
   bracketSpacing: true,
   bracketSameLine: true,
 }

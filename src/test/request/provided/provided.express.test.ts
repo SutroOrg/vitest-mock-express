@@ -10,10 +10,10 @@ import {
   providedRes,
   providedString,
   providedStringArray,
-} from '../../helpers/provided'
+} from '../../helpers/provided.js'
 
 // Tested Module
-import getMockReq from '../../../request/request'
+import getMockReq from '../../../request/request.js'
 
 describe('request - Provided for "express - Request" (accepts arguments and returns expected values)', () => {
   test('req.params can be provided', () => {
@@ -217,13 +217,6 @@ describe('request - Provided for "express - Request" (accepts arguments and retu
 
     expect(req.range).toBeDefined()
     expect(req.range).toBe(providedFunction)
-  })
-
-  test('req.param can be provided', () => {
-    const req = getMockReq({ param: providedFunction })
-
-    expect(req.param).toBeDefined()
-    expect(req.param).toBe(providedFunction)
   })
 
   test('req.is can be provided', () => {

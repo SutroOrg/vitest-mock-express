@@ -2,7 +2,7 @@
 import type { Response, NextFunction } from 'express'
 
 // Local Types
-import type { MockResponse } from './index'
+import type { MockResponse } from './index.js'
 
 /**
  * Returns a mocked version of key **Express** components, including:
@@ -29,7 +29,6 @@ export const getMockRes = <T extends Response>(
     json = vi.fn().mockName('json mock default'),
     jsonp = vi.fn().mockName('jsonp mock default'),
     sendFile = vi.fn().mockName('sendFile mock default'),
-    sendfile = vi.fn().mockName('sendfile mock default'),
     download = vi.fn().mockName('download mock default'),
     contentType = vi.fn().mockName('contentType mock default'),
     type = vi.fn().mockName('type mock default'),
@@ -137,7 +136,6 @@ export const getMockRes = <T extends Response>(
     json,
     jsonp,
     sendFile,
-    sendfile,
     download,
     contentType,
     type,
@@ -289,7 +287,6 @@ export const getMockRes = <T extends Response>(
     response.json.mockClear()
     response.jsonp.mockClear()
     response.sendFile.mockClear()
-    response.sendfile.mockClear()
     response.download.mockClear()
     response.contentType.mockClear()
     response.type.mockClear()

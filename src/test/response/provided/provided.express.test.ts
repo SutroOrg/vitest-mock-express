@@ -1,5 +1,5 @@
 // Helpers
-import { describe, test, expect } from 'vitest'
+import { describe, expect, test } from 'vitest'
 import {
   providedApp,
   providedBoolean,
@@ -7,10 +7,10 @@ import {
   providedObject,
   providedReq,
   providedString,
-} from '../../helpers/provided'
+} from '../../helpers/provided.js'
 
 // Tested Module
-import getMockRes from '../../../response/response'
+import getMockRes from '../../../response/response.js'
 
 describe('response - Provided for "express.Express" (accepts arguments and returns expected values)', () => {
   test('res.status can be provided', () => {
@@ -60,13 +60,6 @@ describe('response - Provided for "express.Express" (accepts arguments and retur
 
     expect(res.sendFile).toBeDefined()
     expect(res.sendFile).toBe(providedFunction)
-  })
-
-  test('res.sendfile can be provided', () => {
-    const { res } = getMockRes({ sendfile: providedFunction })
-
-    expect(res.sendfile).toBeDefined()
-    expect(res.sendfile).toBe(providedFunction)
   })
 
   test('res.download can be provided', () => {

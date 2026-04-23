@@ -9,11 +9,10 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "sourceMap": true,
-    "baseUrl": ".",
     "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "outDir": "dist",
     "types": ["vitest/globals"]

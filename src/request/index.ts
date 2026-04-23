@@ -4,7 +4,7 @@ import type { Readable } from 'stream'
 import type { Request } from 'express-serve-static-core'
 
 // Local Types
-import type { EventEventEmitter } from '../index'
+import type { EventEventEmitter } from '../index.js'
 import { Mock } from 'vitest'
 
 interface StreamReadable extends EventEventEmitter {
