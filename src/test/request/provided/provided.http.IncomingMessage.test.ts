@@ -1,5 +1,6 @@
 // Helpers
 import { describe, test, expect } from 'vitest'
+import { IncomingMessage } from 'http'
 import {
   providedBoolean,
   providedFunction,
@@ -51,14 +52,14 @@ describe('request - Provided for "http.IncomingMessage" (accepts arguments and r
   })
 
   test('req.connection can be provided', () => {
-    const req = getMockReq({ connection: providedSocket as any })
+    const req = getMockReq({ connection: providedSocket as unknown as IncomingMessage['connection'] })
 
     expect(req.connection).toBeDefined()
     expect(req.connection).toBe(providedSocket)
   })
 
   test('req.socket can be provided', () => {
-    const req = getMockReq({ socket: providedSocket as any })
+    const req = getMockReq({ socket: providedSocket as unknown as IncomingMessage['socket'] })
 
     expect(req.socket).toBeDefined()
     expect(req.socket).toBe(providedSocket)
