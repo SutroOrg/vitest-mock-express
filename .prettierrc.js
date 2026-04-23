@@ -5,7 +5,7 @@ export default {
   jsxSingleQuote: true,
   printWidth: 120,
   tabWidth: 2,
-  tabs: false,
+  useTabs: false,
   arrowParens: 'always',
   bracketSpacing: true,
   bracketSameLine: true,

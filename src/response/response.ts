@@ -1,5 +1,6 @@
 // Types
 import type { Response, NextFunction } from 'express'
+import { vi } from 'vitest'
 
 // Local Types
 import type { MockResponse } from './index.js'

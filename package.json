@@ -1,6 +1,6 @@
 {
   "name": "@sutro-dev/vitest-mock-express",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A lightweight Vitest mock for unit testing Express",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,10 +11,11 @@
     "test-watch": "vitest \"/*.ts\" --watchAll",
     "test-watch-all": "vitest --watchAll",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts}' --quiet --fix",
+    "format": "prettier --write '*/**/*.{js,ts,json,md}'",
     "build": "tsc",
     "clean": "rm -rf dist/*",
     "prepublishOnly": "npm ci && npm run clean && npm run build",
-    "release": "npm run prepublishOnly && npm run lint && npm run test",
+    "release": "npm run prepublishOnly && npm run lint && npm run format && npm run test",
     "ci": "npm run release --verbose"
   },
   "repository": {
@@ -44,8 +45,6 @@
     "@typescript-eslint/parser": "^8.59.0",
     "@vitest/coverage-v8": "^4.1.5",
     "eslint": "^10.2.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
@@ -56,5 +55,6 @@
   },
   "dependencies": {
     "@types/express": ">=5"
-  }
+  },
+  "packageManager": "pnpm@10.30.0+sha512.2b5753de015d480eeb88f5b5b61e0051f05b4301808a82ec8b840c9d2adf7748eb352c83f5c1593ca703ff1017295bc3fdd3119abb9686efc96b9fcb18200937"
 }
