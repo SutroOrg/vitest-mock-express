@@ -1,6 +1,6 @@
 {
   "name": "@sutro-dev/vitest-mock-express",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A lightweight Vitest mock for unit testing Express",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
